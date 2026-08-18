@@ -9,7 +9,20 @@ import optimizer as opt
 st.set_page_config(page_title="Sinter Burden Control", page_icon="⚙️", layout="wide", initial_sidebar_state="expanded")
 
 # ----------------------------- CONSTANTS ---------------------------------
-TARGETS = opt.TARGETS
+# ----------------------------- CONSTANTS ---------------------------------
+TARGETS = {
+    "Fe_min": 54.0,
+    "SiO2_max": 5.8,
+    "Al2O3_max": 4.5,
+    "Al2O3_SiO2_max": 0.98,
+    "Basicity_min": 1.9,
+    "Basicity_max": 2.0,
+    "MgO_min": 2.2,
+    "MgO_max": 2.4,
+    "CaO_min": 10.5,
+    "CaO_max": 11.5,
+}
+
 CHEM_COLS = ["Fe", "SiO2", "Al2O3", "CaO", "MgO", "LOI", "Moisture_Pct"]
 GROUPS = ["Iron_ore", "Flux", "Recycle", "Fuel"]
 GROUP_LABEL = {"Iron_ore":"Iron Ore", "Flux":"Flux", "Recycle":"Recycle", "Fuel":"Fuel"}
